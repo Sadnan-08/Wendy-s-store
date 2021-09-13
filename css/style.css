@@ -2,12 +2,15 @@ body {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-
+.heading{
+  color: dodgerblue;
+  font-size: 52px;
+  letter-spacing: 1px;
+}
 .search-field:hover {
   outline: none;
   border: none;
 }
-
 .search-button {
   padding: 10px 50px;
   border-radius: 25px;
@@ -23,11 +26,14 @@ body {
   align-items: center;
   justify-content: center;
 }
+.same-height{
+  height: 520px;
+}
 .single-product {
   padding: 10px;
-  border-radius: 3px;
+  border-radius: 4px;
   transition: 0.6s;
-  background-color:rgb(200, 225, 248);
+  background-color:rgb(215, 233, 250);
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;

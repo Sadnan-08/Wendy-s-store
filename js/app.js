@@ -12,14 +12,13 @@ const showProducts = (products) => {
   for (const product of allProducts) {
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product h-75 ">
+    div.innerHTML = `<div class="single-product same-height">
       <div>
-    <img class="product-image" src=${product.image}></img>
+    <img class="product-image mb-2" src=${product.image}></img>
       </div>
       <h3>${product.title}</h3>
       <p class="mb-2 fs-5">Category: ${product.category}</p>
-      <p class="mb-2">Rating: ${product.rating.rate}</p>
-      <p>Total ${product.rating.count} people rated</p>
+      <p class="mb-3">Rating: ${product.rating.rate} <i class="fas fa-star"></i> (${product.rating.count})</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button></div>
@@ -32,7 +31,6 @@ let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
-
   updateTaxAndCharge();
   updateTotal();
   document.getElementById("total-Products").innerText = count;
