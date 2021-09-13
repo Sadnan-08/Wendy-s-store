@@ -8,8 +8,7 @@
   <title>Wendy's Store</title>
   <link rel="stylesheet" href="./css/style.css" />
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- google Montserrat  font  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,11 +21,16 @@
   <main class="main">
     <div class="search-field">
       <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
+
+        <div class="input-group mb-3 w-25 p-5 mx-auto">
+          <input type="text" class="form-control" placeholder="Search Products" aria-label="Recipient's username" aria-describedby="basic-addon2">
+          <span class="input-group-text bg-info" id="search-btn" onclick="loadProducts()">Search</span>
+        </div>
+
+        <!-- <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
           autocomplete="off" id="search-btn" onclick="loadProducts()">
           Search
-        </button>
+        </button> -->
       </div>
     </div>
     <div class="row">
